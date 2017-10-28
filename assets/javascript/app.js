@@ -22,11 +22,11 @@ database.ref().on("value", function(snapshot) {
 	console.log(employeeCount);
 },function(e){
 	console.log(e);
-})
+});
 
 
 $(document).ready(function(){
-    $("#enterBtn").on("click", function(event) 
+    $("#enterBtn").on("click", function(event)
     {
       event.preventDefault();
 
@@ -37,7 +37,7 @@ $(document).ready(function(){
 
       console.log(name, role, startDate, monthlyRate);
 
-      var newRow = $("<tr>")
+      var newRow = $("<tr>");
 
       var newName = $("<td>").text(name);
       var newRole = $("<td>").text(role);
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
     });
 
- })
+ });
 
 // database.ref('users/' + employeeCount).set({
 // 	name: "Leo",
@@ -65,6 +65,3 @@ $(document).ready(function(){
 // 	startDate: "01/01/2000",
 // 	rate: "$10"
 // })
-
-
-
